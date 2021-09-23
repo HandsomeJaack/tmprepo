@@ -1,5 +1,17 @@
 #include <iostream>
 
+int inverseFactorial(int factorial) {
+    int current = 1;
+    while (factorial > current) {
+        factorial /= current;
+        ++current;
+    }
+    if (current == factorial) {
+        return current;
+    }
+    return -1;
+}
+
 int main() {
     int number;
     int fact = 1;
@@ -9,5 +21,8 @@ int main() {
         fact = fact * i;
     std::cout << "Factorial of " << number 
               << "is: " << fact << std::endl;
+
+    std::cout << inverseFactorial(720);
+
     return 0;
 }
