@@ -11,8 +11,12 @@ int askForInput() {
 
 void printResult(int number,
                  int res,
-                 std::string method) {
+                 std::string method,
+                 int secondNumber = 0) {
     std::cout << method << " of " << number
+              << (method == "Pow" ?
+                            "^" + std::to_string(secondNumber)
+                            : "")
               << " is: " << res << std::endl;
 }
 
@@ -35,6 +39,7 @@ int main() {
                         "Recursive factorial");
 
     number = askForInput();
-    printResult(number, std::pow(number, number), "Pow");
+    int secondNumber = askForInput();
+    printResult(number, std::pow(number, secondNumber), "Pow", secondNumber);
     return 0;
 }
