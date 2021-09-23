@@ -54,6 +54,10 @@ int main() {
                         "Recursive factorial");
 
     number = askForInput();
+    printResult(number, inverseFactorial(number),
+                        "Inverse factorial");
+
+    number = askForInput();
     int secondNumber = askForInput();
     printResult(number, std::pow(number, secondNumber), "Pow", secondNumber);
     return 0;
