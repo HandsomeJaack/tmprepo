@@ -1,5 +1,6 @@
 #include <iostream>
 #include <cmath>
+#include <string>
 
 int askForInput() {
     int number;
@@ -8,9 +9,11 @@ int askForInput() {
     return number;
 }
 
-void printResult(int number, int fact) {
-    std::cout << "Factorial of " << number
-              << " is: " << fact << std::endl;
+void printResult(int number,
+                 int res,
+                 std::string method) {
+    std::cout << method << " of " << number
+              << " is: " << res << std::endl;
 }
 
 int recursiveFactorial(int n) {
@@ -25,12 +28,13 @@ int main() {
     int number = askForInput();
     for (int i = 1; i <= number; ++i)
         fact = fact * i;
-    printResult(number, fact);
+    printResult(number, fact, "Factorial");
 
     number = askForInput();
-    printResult(number, recursiveFactorial(number));
+    printResult(number, recursiveFactorial(number),
+                        "Recursive factorial");
 
     number = askForInput();
-    printResult(number, std::pow(number, number));
+    printResult(number, std::pow(number, number), "Pow");
     return 0;
 }
