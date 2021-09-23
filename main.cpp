@@ -3,6 +3,9 @@
 int inverseFactorial(int factorial) {
     int current = 1;
     while (factorial > current) {
+        if (factorial % current) {
+            return -1; //not divisible
+        }
         factorial /= current;
         ++current;
     }
