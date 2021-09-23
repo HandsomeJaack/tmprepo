@@ -17,6 +17,9 @@ int main() {
     std::cout << "Factorial of " << number 
               << "is: " << fact << std::endl;
 
-    std::cout << recursiveFactorial(5);
+    std::cout << "Enter any number: ";
+    std::cin >> number;
+    std::cout << "Factorial of " << number
+              << "is: " << recursiveFactorial(number) << std::endl;
     return 0;
 }
