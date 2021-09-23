@@ -1,5 +1,17 @@
 #include <iostream>
 
+int askForInput() {
+    int number;
+    std::cout << "Enter any number: ";
+    std::cin >> number;
+    return number;
+}
+
+void printResult(int number, int fact) {
+    std::cout << "Factorial of " << number
+              << " is: " << fact << std::endl;
+}
+
 int recursiveFactorial(int n) {
     if (n > 1)
         return n * recursiveFactorial(n - 1);
@@ -8,18 +20,13 @@ int recursiveFactorial(int n) {
 }
 
 int main() {
-    int number;
     int fact = 1;
-    std::cout << "Enter any number: ";
-    std::cin >> number;
+    int number = askForInput();
     for (int i = 1; i <= number; ++i)
         fact = fact * i;
-    std::cout << "Factorial of " << number 
-              << " is: " << fact << std::endl;
+    printResult(number, fact);
 
-    std::cout << "Enter any number: ";
-    std::cin >> number;
-    std::cout << "Factorial of " << number
-              << " is: " << recursiveFactorial(number) << std::endl;
+    number = askForInput();
+    printResult(number, recursiveFactorial(number));
     return 0;
 }
