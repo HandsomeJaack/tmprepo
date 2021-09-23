@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cmath>
 
 int askForInput() {
     int number;
@@ -28,5 +29,8 @@ int main() {
 
     number = askForInput();
     printResult(number, recursiveFactorial(number));
+
+    number = askForInput();
+    printResult(number, std::pow(number, number));
     return 0;
 }
