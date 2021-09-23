@@ -8,6 +8,6 @@ int main() {
     for (int i = 1; i < number; ++i)
         fact = fact * i;
     std::cout << "Factorial of " << number 
-              << "is: " << fact << std::endl;
+              << " is: " << fact << std::endl;
     return 0;
 }
