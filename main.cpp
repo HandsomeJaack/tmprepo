@@ -1,5 +1,12 @@
 #include <iostream>
 
+int recursiveFactorial(int n) {
+    if (n > 1)
+        return n * recursiveFactorial(n - 1);
+    else
+        return 1;
+}
+
 int main() {
     int number;
     int fact = 1;
@@ -9,5 +16,10 @@ int main() {
         fact = fact * i;
     std::cout << "Factorial of " << number 
               << " is: " << fact << std::endl;
+
+    std::cout << "Enter any number: ";
+    std::cin >> number;
+    std::cout << "Factorial of " << number
+              << " is: " << recursiveFactorial(number) << std::endl;
     return 0;
 }
