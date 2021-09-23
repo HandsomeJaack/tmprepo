@@ -7,6 +7,11 @@ int askForInput() {
     return number;
 }
 
+void printResult(int number, int fact) {
+    std::cout << "Factorial of " << number
+              << " is: " << fact << std::endl;
+}
+
 int recursiveFactorial(int n) {
     if (n > 1)
         return n * recursiveFactorial(n - 1);
@@ -19,11 +24,9 @@ int main() {
     int number = askForInput();
     for (int i = 1; i <= number; ++i)
         fact = fact * i;
-    std::cout << "Factorial of " << number 
-              << " is: " << fact << std::endl;
+    printResult(number, fact);
 
     number = askForInput();
-    std::cout << "Factorial of " << number
-              << " is: " << recursiveFactorial(number) << std::endl;
+    printResult(number, recursiveFactorial(number));
     return 0;
 }
