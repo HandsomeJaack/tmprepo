@@ -1,5 +1,5 @@
 CXX 	 = g++
-CXXFLAGS = -g -O2
+CXXFLAGS = -g -O3
 LDFLAGS  = -g
 SRCS	 = main.cpp
 OBJS	 = main.o
