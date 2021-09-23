@@ -27,7 +27,7 @@ int main() {
 
     std::cout << "Enter any number: ";
     std::cin >> number;
-    std::cout << "Factorial of " << number
+    std::cout << "Invers factorial of " << number
               << "is: " << inverseFactorial(number) << std::endl;
 
     return 0;
